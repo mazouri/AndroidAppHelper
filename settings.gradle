@@ -1,1 +1,1 @@
-include ':app', ':lib-databingding'
+include ':app', ':lib-databingding', ':lib-mvvm'

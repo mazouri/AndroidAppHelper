@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.mazouri.lib_databingding.sample.DataBindingMainActivity;
+import com.mazouri.lib_mvvm.view.MVVMMainActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -21,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_data_bind)
     public void clickDataBind() {
         lunchActivityByClass(DataBindingMainActivity.class);
+    }
+
+    @OnClick(R.id.btn_mvvm)
+    public void clickMvvm() {
+        lunchActivityByClass(MVVMMainActivity.class);
     }
 
     private void lunchActivityByClass(Class targetClass) {

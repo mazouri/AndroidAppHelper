@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">lib-mvvm</string>
+
+    <string name="action_github">Github</string>
+
+
+    <string name="error_loading_people">There seems to have been some error.</string>
+    <string name="default_loading_people">Press the button to load people!</string>
+</resources>

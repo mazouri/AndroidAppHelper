@@ -1,21 +1,21 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
 
-    //不仅libs-databinding 中要加入，这里也要加入，否则无法使用dataBinding
     dataBinding {
         enabled true
     }
 
     defaultConfig {
-        applicationId "com.mazouri.apphelper"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -26,12 +26,23 @@ android {
 }
 
 dependencies {
-    compile project(':lib-databingding'), project(':lib-mvvm')
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
-    compile 'com.jakewharton:butterknife:7.0.1'
+
+    compile supportDependencies.design
+    compile supportDependencies.recyclerView
+    compile supportDependencies.cardView
+
+    compile retrofitDependencies.retrofit
+    compile retrofitDependencies.gson
+    compile retrofitDependencies.rxAdapterJava
+
+    compile rxDependencies.rxAndroid
+    compile circleImageView
+    compile glide
+    compile butterknife
 }
