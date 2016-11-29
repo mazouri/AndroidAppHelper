@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.mazouri.lib_databingding.DataBindingActivity;
+import com.mazouri.lib_databingding.sample.DataBindingMainActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_data_bind)
     public void clickDataBind() {
-        lunchActivityByClass(DataBindingActivity.class);
+        lunchActivityByClass(DataBindingMainActivity.class);
     }
 
     private void lunchActivityByClass(Class targetClass) {

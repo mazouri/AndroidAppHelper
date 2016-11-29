@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.mazouri.lib_databingding.model.ObservableUser"/>
+        <import type="com.mazouri.lib_databingding.model.PlainUser"/>
+        <variable
+            name="oUser"
+            type="ObservableUser"/>
+        <variable
+            name="pUser"
+            type="PlainUser"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BaseObservable"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/textFormatBaseObservable(oUser.firstName, oUser.lastName)}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ObservableField"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/textFormatBaseObservableWithAge(pUser.firstName, pUser.lastName, pUser.age)}"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set My Name"
+                android:onClick="setMyName"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Other Name"
+                android:onClick="setOtherName"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
